@@ -1,0 +1,5 @@
+import assert from 'node:assert/strict'
+import { access, readFile } from 'node:fs/promises'
+import { spawnSync } from 'node:child_process'
+const required = ['.codex-plugin/plugin.json', '.mcp.json', 'cordis.patch.yml', 'LICENSE', 'README.md', 'README.zh-CN.md', 'SECURITY.md', 'examples/promote.json', 'index.js', 'mcp-server.mjs']; for (const file of required) await access(file); const pkg = JSON.parse(await readFile('package.json', 'utf8')); const plugin = JSON.parse(await readFile('.codex-plugin/plugin.json', 'utf8')); assert.equal(pkg.name, plugin.name); assert.equal(pkg.version, plugin.version); assert.equal(plugin.mcpServers, './.mcp.json'); const cli = spawnSync(process.execPath, ['bin/dsh-canary-decision-proof.mjs', 'verify', 'examples/promote.json'], { encoding: 'utf8', shell: false, timeout: 5000 }); assert.equal(cli.status, 0, cli.stderr); assert.equal(JSON.parse(cli.stdout).verdict, 'verified-decision'); process.stdout.write(`${JSON.stringify({ ok: true, requiredFiles: required.length, cliVerdict: 'verified-decision' })}\n`)
+

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "dsh-canary-decision-proof": {
+      "command": "node",
+      "args": ["${pluginDir}/mcp-server.mjs"]
+    }
+  }
+}

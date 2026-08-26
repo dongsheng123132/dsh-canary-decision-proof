@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "proofId": "canary-2026-08-26",
+  "evaluationTime": "2026-08-26T09:00:00.000Z",
+  "rollout": {
+    "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "canaryArtifactSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "baselineArtifactSha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "environmentHash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "policySha256": "7777777777777777777777777777777777777777777777777777777777777777",
+    "startedAt": "2026-08-26T08:00:00.000Z"
+  },
+  "policy": {
+    "requiredWindows": 3,
+    "minWindowMs": 300000,
+    "maxCanaryTrafficBps": 1000,
+    "maxEvidenceAgeMs": 7200000,
+    "minDistinctObservers": 2,
+    "metrics": [
+      { "metricIdHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "direction": "higher-better", "maxRegressionBps": 500, "minSampleCount": 1000, "failureLimit": 2 },
+      { "metricIdHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "direction": "lower-better", "maxRegressionBps": 500, "minSampleCount": 1000, "failureLimit": 2 }
+    ]
+  },
+  "exposures": [
+    { "sequence": 1, "windowIdHash": "1111111111111111111111111111111111111111111111111111111111111111", "canaryTrafficBps": 1000, "startedAt": "2026-08-26T08:00:00.000Z", "endedAt": "2026-08-26T08:05:00.000Z" },
+    { "sequence": 2, "windowIdHash": "2222222222222222222222222222222222222222222222222222222222222222", "canaryTrafficBps": 1000, "startedAt": "2026-08-26T08:10:00.000Z", "endedAt": "2026-08-26T08:15:00.000Z" },
+    { "sequence": 3, "windowIdHash": "3333333333333333333333333333333333333333333333333333333333333333", "canaryTrafficBps": 1000, "startedAt": "2026-08-26T08:20:00.000Z", "endedAt": "2026-08-26T08:25:00.000Z" }
+  ],
+  "decision": {
+    "declared": "promote",
+    "decisionReceiptSha256": "6666666666666666666666666666666666666666666666666666666666666666",
+    "decidedAt": "2026-08-26T08:30:00.000Z"
+  },
+  "observations": [
+    { "observationIdHash": "0101010101010101010101010101010101010101010101010101010101010101", "windowIdHash": "1111111111111111111111111111111111111111111111111111111111111111", "metricIdHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "cohort": "baseline", "valueMicros": 1000000, "sampleCount": 2000, "observerHash": "8888888888888888888888888888888888888888888888888888888888888888", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:05:00.000Z" },
+    { "observationIdHash": "0202020202020202020202020202020202020202020202020202020202020202", "windowIdHash": "1111111111111111111111111111111111111111111111111111111111111111", "metricIdHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "cohort": "canary", "valueMicros": 990000, "sampleCount": 2000, "observerHash": "9999999999999999999999999999999999999999999999999999999999999999", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:05:00.000Z" },
+    { "observationIdHash": "0303030303030303030303030303030303030303030303030303030303030303", "windowIdHash": "1111111111111111111111111111111111111111111111111111111111111111", "metricIdHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "cohort": "baseline", "valueMicros": 100000, "sampleCount": 2000, "observerHash": "8888888888888888888888888888888888888888888888888888888888888888", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:05:00.000Z" },
+    { "observationIdHash": "0404040404040404040404040404040404040404040404040404040404040404", "windowIdHash": "1111111111111111111111111111111111111111111111111111111111111111", "metricIdHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "cohort": "canary", "valueMicros": 101000, "sampleCount": 2000, "observerHash": "9999999999999999999999999999999999999999999999999999999999999999", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:05:00.000Z" },
+    { "observationIdHash": "0505050505050505050505050505050505050505050505050505050505050505", "windowIdHash": "2222222222222222222222222222222222222222222222222222222222222222", "metricIdHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "cohort": "baseline", "valueMicros": 1000000, "sampleCount": 2000, "observerHash": "8888888888888888888888888888888888888888888888888888888888888888", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:15:00.000Z" },
+    { "observationIdHash": "0606060606060606060606060606060606060606060606060606060606060606", "windowIdHash": "2222222222222222222222222222222222222222222222222222222222222222", "metricIdHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "cohort": "canary", "valueMicros": 980000, "sampleCount": 2000, "observerHash": "9999999999999999999999999999999999999999999999999999999999999999", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:15:00.000Z" },
+    { "observationIdHash": "0707070707070707070707070707070707070707070707070707070707070707", "windowIdHash": "2222222222222222222222222222222222222222222222222222222222222222", "metricIdHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "cohort": "baseline", "valueMicros": 100000, "sampleCount": 2000, "observerHash": "8888888888888888888888888888888888888888888888888888888888888888", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:15:00.000Z" },
+    { "observationIdHash": "0808080808080808080808080808080808080808080808080808080808080808", "windowIdHash": "2222222222222222222222222222222222222222222222222222222222222222", "metricIdHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "cohort": "canary", "valueMicros": 102000, "sampleCount": 2000, "observerHash": "9999999999999999999999999999999999999999999999999999999999999999", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:15:00.000Z" },
+    { "observationIdHash": "0909090909090909090909090909090909090909090909090909090909090909", "windowIdHash": "3333333333333333333333333333333333333333333333333333333333333333", "metricIdHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "cohort": "baseline", "valueMicros": 1000000, "sampleCount": 2000, "observerHash": "8888888888888888888888888888888888888888888888888888888888888888", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:25:00.000Z" },
+    { "observationIdHash": "1010101010101010101010101010101010101010101010101010101010101010", "windowIdHash": "3333333333333333333333333333333333333333333333333333333333333333", "metricIdHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "cohort": "canary", "valueMicros": 970000, "sampleCount": 2000, "observerHash": "9999999999999999999999999999999999999999999999999999999999999999", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:25:00.000Z" },
+    { "observationIdHash": "1110111011101110111011101110111011101110111011101110111011101110", "windowIdHash": "3333333333333333333333333333333333333333333333333333333333333333", "metricIdHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "cohort": "baseline", "valueMicros": 100000, "sampleCount": 2000, "observerHash": "8888888888888888888888888888888888888888888888888888888888888888", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:25:00.000Z" },
+    { "observationIdHash": "1212121212121212121212121212121212121212121212121212121212121212", "windowIdHash": "3333333333333333333333333333333333333333333333333333333333333333", "metricIdHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "cohort": "canary", "valueMicros": 103000, "sampleCount": 2000, "observerHash": "9999999999999999999999999999999999999999999999999999999999999999", "rolloutReceiptSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "policySha256": "7777777777777777777777777777777777777777777777777777777777777777", "observedAt": "2026-08-26T08:25:00.000Z" }
+  ]
+}
