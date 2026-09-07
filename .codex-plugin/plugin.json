@@ -1,6 +1,6 @@
 {
   "name": "dsh-canary-decision-proof",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Offline proof that a canary promote, abort or pause decision follows its declared evidence policy",
   "author": {
     "name": "dongsheng123132"
@@ -8,14 +8,24 @@
   "homepage": "https://github.com/dongsheng123132/dsh-canary-decision-proof",
   "repository": "https://github.com/dongsheng123132/dsh-canary-decision-proof",
   "license": "MIT",
-  "keywords": ["deepseek-harness", "dsh", "canary", "progressive-delivery", "evidence"],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "canary",
+    "progressive-delivery",
+    "evidence"
+  ],
   "interface": {
     "displayName": "DSH Canary Decision Proof",
     "shortDescription": "Verify deterministic canary decisions.",
     "longDescription": "Checks hash-only baseline/canary windows, exposure limits, samples, observers and metric thresholds before accepting a recorded promote, abort or pause decision.",
     "developerName": "dongsheng123132",
     "category": "Developer Tools",
-    "capabilities": ["MCP tools", "DSH tools", "offline verification"],
+    "capabilities": [
+      "MCP tools",
+      "DSH tools",
+      "offline verification"
+    ],
     "defaultPrompt": "Verify this explicit canary decision manifest without querying or changing live infrastructure."
   },
   "mcpServers": "./.mcp.json"
