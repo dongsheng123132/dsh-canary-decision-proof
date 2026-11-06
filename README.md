@@ -1,5 +1,7 @@
 # DSH Canary Decision Proof
 
+**Maintainer / Author：贺去病 (He Fangsheng / Dosen) · [hequbing.com](https://www.hequbing.com)**
+
 Offline, deterministic evidence that a recorded canary `promote`, `abort`, or `pause` decision follows one explicit, hash-only policy.
 
 This plugin **does not execute a rollout, query live metrics, authenticate receipts, grant authorization, prove statistical significance, or prove user outcomes**. It verifies supplied evidence and fails closed to `pause` when that evidence is incomplete.
