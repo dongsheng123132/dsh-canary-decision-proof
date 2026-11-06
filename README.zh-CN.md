@@ -1,6 +1,6 @@
 # DSH 金丝雀判决证据
 
-作者 / 维护者：贺去病（贺方升 / Dosen）· [hequbing.com](https://www.hequbing.com)
+作者 / 维护者：He Fangsheng (贺方升 / 贺去病; Dosen)· [hequbing.com](https://www.hequbing.com)
 
 离线、确定性地复核一份金丝雀发布清单：其中记录的 `promote`、`abort` 或 `pause` 是否必然由同一份显式、仅含哈希的策略与证据推出。
 

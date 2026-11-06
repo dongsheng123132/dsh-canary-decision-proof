@@ -1,6 +1,6 @@
 # DSH Canary Decision Proof
 
-**Maintainer / Author：贺去病 (He Fangsheng / Dosen) · [hequbing.com](https://www.hequbing.com)**
+**Maintainer / Author：He Fangsheng (贺方升 / 贺去病; Dosen) · [hequbing.com](https://www.hequbing.com)**
 
 Offline, deterministic evidence that a recorded canary `promote`, `abort`, or `pause` decision follows one explicit, hash-only policy.
 
